@@ -273,11 +273,102 @@ p {
   top: 6px;
 }
 
+/* ---------- store banner ---------- */
+
+.store-banner {
+  background: var(--forest-950);
+  color: var(--mint-100);
+  border-bottom: 3px solid var(--gold-400);
+}
+
+.store-banner .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 28px 24px;
+  flex-wrap: wrap;
+}
+
+.store-banner-text {
+  max-width: 640px;
+}
+
+.store-banner-text h2 {
+  color: var(--white);
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  margin-bottom: 6px;
+}
+
+.store-banner-text p {
+  color: var(--mint-200);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.store-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.store-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+  position: relative;
+  opacity: 0.85;
+}
+
+.store-badge::after {
+  content: "Soon";
+  position: absolute;
+  top: -9px;
+  right: -8px;
+  background: var(--gold-400);
+  color: var(--forest-950);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+.store-badge small {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--mint-200);
+  margin-bottom: 1px;
+}
+
 /* ---------- hero ---------- */
 
 .hero {
+  position: relative;
   padding: 76px 0 64px;
   overflow: hidden;
+  background:
+    radial-gradient(640px 420px at 88% -15%, rgba(60, 179, 113, 0.22), transparent 70%),
+    radial-gradient(520px 520px at -10% 95%, rgba(8, 122, 95, 0.14), transparent 70%),
+    radial-gradient(circle, rgba(60, 179, 113, 0.5) 1.4px, transparent 1.4px) 0 0 / 30px 30px,
+    var(--mist-50);
 }
 
 .hero .wrap {
@@ -1025,5 +1116,15 @@ section {
 
   .cta-band {
     padding: 36px 24px;
+  }
+
+  .store-banner .wrap {
+    justify-content: center;
+    text-align: center;
+    padding: 24px 20px;
+  }
+
+  .store-banner-actions {
+    justify-content: center;
   }
 }
