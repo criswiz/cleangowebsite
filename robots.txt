@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Update this to your final production domain once it's set on Vercel.
-Sitemap: https://your-domain.example/sitemap.xml
+Sitemap: https://www.cleangoservicesapp.com/sitemap.xml
