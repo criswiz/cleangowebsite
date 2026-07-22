@@ -371,10 +371,8 @@ p {
   padding: 76px 0 64px;
   overflow: hidden;
   background:
-    radial-gradient(640px 420px at 88% -15%, rgba(60, 179, 113, 0.22), transparent 70%),
-    radial-gradient(520px 520px at -10% 95%, rgba(8, 122, 95, 0.14), transparent 70%),
-    radial-gradient(circle, rgba(60, 179, 113, 0.5) 1.4px, transparent 1.4px) 0 0 / 30px 30px,
-    var(--mist-50);
+    linear-gradient(100deg, rgba(7, 61, 50, 0.94) 0%, rgba(7, 61, 50, 0.86) 34%, rgba(7, 61, 50, 0.64) 62%, rgba(7, 61, 50, 0.42) 100%),
+    url("/img/hero-cleaning.jpg") center 30% / cover no-repeat;
 }
 
 .hero .wrap {
@@ -384,9 +382,17 @@ p {
   align-items: center;
 }
 
+.hero .eyebrow {
+  color: var(--gold-400);
+}
+
+.hero .eyebrow::before {
+  background: var(--gold-400);
+}
+
 .hero h1 {
   font-size: clamp(2rem, 4.4vw, 3.6rem);
-  color: var(--forest-950);
+  color: var(--white);
 }
 
 .hero h1 .line {
@@ -414,7 +420,7 @@ p {
 
 .hero-sub {
   font-size: 1.12rem;
-  color: var(--sage-500);
+  color: var(--mint-100);
   max-width: 46ch;
   margin-bottom: 30px;
 }
@@ -426,16 +432,26 @@ p {
   margin-bottom: 34px;
 }
 
+.hero-ctas .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: var(--white);
+}
+
+.hero-ctas .btn-ghost:hover {
+  border-color: var(--white);
+  color: var(--white);
+}
+
 .hero-meta {
   display: flex;
   gap: 22px;
   flex-wrap: wrap;
   font-size: 0.88rem;
-  color: var(--sage-500);
+  color: var(--mint-200);
 }
 
 .hero-meta strong {
-  color: var(--forest-900);
+  color: var(--white);
   font-family: var(--font-mono);
   font-weight: 600;
 }
